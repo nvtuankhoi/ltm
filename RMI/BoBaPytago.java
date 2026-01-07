@@ -1,4 +1,4 @@
-package RMI.B22DCCN466;
+package RMI;
 
 import java.rmi.*;
 import java.rmi.registry.*;
