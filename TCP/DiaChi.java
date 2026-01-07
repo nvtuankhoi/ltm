@@ -38,7 +38,7 @@ public class DiaChi {
         Socket socket = new Socket("203.162.10.109", 2209);
         ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
-        String code = "B22DCCN786;AjecapMw";
+        String code = "B22DCCN466;AjecapMw";
         out.writeObject(code);
         out.flush();
         Address ad = (Address) in.readObject();

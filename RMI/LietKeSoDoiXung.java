@@ -1,4 +1,4 @@
-package RMI.B21DCCN021;
+package RMI.B22DCCN466;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -19,7 +19,7 @@ public class LietKeSoDoiXung {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN021", "t3cBY2uk");
+        String s = (String) sv.requestData("B22DCCN466", "t3cBY2uk");
         System.out.println(s);
         s = s.replace(";", "");
         String[] tmp = s.trim().split("\\s+");
@@ -30,6 +30,6 @@ public class LietKeSoDoiXung {
                 a.add(i);
         }
         System.out.println(a);
-        sv.submitData("B21DCCN021", "t3cBY2uk", a);
+        sv.submitData("B22DCCN466", "t3cBY2uk", a);
     }
 }

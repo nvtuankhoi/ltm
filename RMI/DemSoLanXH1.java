@@ -1,4 +1,4 @@
-package RMI.B21DCCN564;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class DemSoLanXH1 {
         // a. Nhận chuỗi từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN564", "U5BEBBOW");
+        String s = sv.requestCharacter("B22DCCN466", "U5BEBBOW");
         System.out.println(s);
         // b. Xử lý xâu
         String res = "";
@@ -26,6 +26,6 @@ public class DemSoLanXH1 {
         }
         System.out.println(res);
         // c. Gửi kết quả lại server
-        sv.submitCharacter("B21DCCN564", "U5BEBBOW", res);
+        sv.submitCharacter("B22DCCN466", "U5BEBBOW", res);
     }
 }

@@ -11,7 +11,7 @@ public class SanPham {
         ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
         // a.
-        String code = "B21DCCN370;151GNZvT";
+        String code = "B22DCCN466;151GNZvT";
         out.writeObject(code);
         out.flush();
         // b.

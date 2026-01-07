@@ -9,7 +9,7 @@ public class MaHoaCaesar {
         Socket socket = new Socket("203.162.10.109", 2207);
         DataInputStream in = new DataInputStream(socket.getInputStream());
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-        String code = "B22DCCN146;doW5fnkq";
+        String code = "B22DCCN466;doW5fnkq";
         out.writeUTF(code);
         out.flush();
         String s = in.readUTF();

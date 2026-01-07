@@ -18,7 +18,7 @@ public class PhepToanCoBan {
         Socket socket = new Socket("203.162.10.109", 2207);
         DataInputStream in = new DataInputStream(socket.getInputStream());
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-        String code = "B21DCCN222;nkBwM6AE";
+        String code = "B22DCCN466;nkBwM6AE";
         out.writeUTF(code);
         out.flush();
         int a = in.readInt(), b = in.readInt();

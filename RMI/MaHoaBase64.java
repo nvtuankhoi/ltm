@@ -1,4 +1,4 @@
-package RMI.B21DCCN029;
+package RMI.B22DCCN466;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -10,13 +10,13 @@ public class MaHoaBase64 {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN029", "psd4Jmnt");
+        String s = sv.requestCharacter("B22DCCN466", "psd4Jmnt");
         System.out.println(s);
         //
         byte[] tmp = Base64.getEncoder().encode(s.getBytes());
         String ans = new String(tmp);
         System.out.println(ans);
         //
-        sv.submitCharacter("B21DCCN029", "psd4Jmnt", ans);
+        sv.submitCharacter("B22DCCN466", "psd4Jmnt", ans);
     }
 }

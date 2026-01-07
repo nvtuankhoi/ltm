@@ -1,4 +1,4 @@
-package RMI.B21DCCN015;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class LietKeSoNguyenTo {
         // a. Nhận dữ liệu
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        int N = (int) sv.requestData("B21DCCN015", "nD8MdtME");
+        int N = (int) sv.requestData("B22DCCN466", "nD8MdtME");
         System.out.println(N);
         // b. Xử lý: Tìm list các SNT
         List<Integer> res = new ArrayList<>();
@@ -21,7 +21,7 @@ public class LietKeSoNguyenTo {
         }
         System.out.println(res);
         // c. Gửi kết quả
-        sv.submitData("B21DCCN015", "NMATI6Zw", res);
+        sv.submitData("B22DCCN466", "NMATI6Zw", res);
     }
 
     public static int check(int n) {// ktra snt

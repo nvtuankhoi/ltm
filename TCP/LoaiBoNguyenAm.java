@@ -8,7 +8,7 @@ public class LoaiBoNguyenAm {
         Socket socket = new Socket("172.188.19.218", 1606);
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-        String code = "B21DCCN319;x8c45mq";
+        String code = "B22DCCN466;x8c45mq";
         bw.write(code);
         bw.newLine();
         bw.flush();

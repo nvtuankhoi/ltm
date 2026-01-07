@@ -8,7 +8,7 @@ public class LuyThua {
         Socket socket = new Socket("172.188.19.218", 1604);
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
-        String code = "B21DCCN768;Yi0enkF";
+        String code = "B22DCCN466;Yi0enkF";
         out.write(code.getBytes());
         out.flush();
         byte[] buffer = new byte[1024];

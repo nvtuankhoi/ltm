@@ -9,7 +9,7 @@ public class SapXepChanLe {
         Socket socket = new Socket("203.162.10.109", 2206);
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
-        String code = "B21DCCN222;rMdCliDV";
+        String code = "B22DCCN466;rMdCliDV";
         out.write(code.getBytes());
         out.flush();
         byte[] buffer = new byte[1024];

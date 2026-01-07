@@ -1,4 +1,4 @@
-package RMI.B21DCCN015;
+package RMI.B22DCCN466;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -11,7 +11,7 @@ public class GiaiMaBase64 {
         // a. Nhận dữ liệu từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN015", "oeJljCIf");
+        byte[] a = sv.requestData("B22DCCN466", "oeJljCIf");
         // b. Giải mã
         String s = new String(a); // Byte -->String
         System.out.println(s);
@@ -20,6 +20,6 @@ public class GiaiMaBase64 {
             System.out.print(x + " ");
         System.out.println();
         // c.
-        sv.submitData("B21DCCN015", "oeJljCIf", ans);
+        sv.submitData("B22DCCN466", "oeJljCIf", ans);
     }
 }

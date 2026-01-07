@@ -40,10 +40,10 @@ public class ChuyenDoiLaMaThapPhan {
         // a.
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN015", "0JaasIw6");
+        String s = sv.requestCharacter("B22DCCN466", "0JaasIw6");
         System.out.println(s);
         // c. Gửi
         System.out.println(change(s));
-        sv.submitCharacter("B21DCCN015", "0JaasIw6", String.valueOf(change(s)));
+        sv.submitCharacter("B22DCCN466", "0JaasIw6", String.valueOf(change(s)));
     }
 }

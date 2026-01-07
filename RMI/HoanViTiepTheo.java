@@ -1,4 +1,4 @@
-package RMI.B21DCCN564;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class HoanViTiepTheo {
         // a. Nhận dữ liệu
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN564", "3Qe0Qb5w");
+        String s = (String) sv.requestData("B22DCCN466", "3Qe0Qb5w");
         System.out.println(s);
         // Đẩy hết vào mảng để xử lý
         s = s.replace(",", " ");
@@ -48,6 +48,6 @@ public class HoanViTiepTheo {
         res = res.substring(0, res.length() - 1);
         System.out.println(res);
         // c. Gửi kết quả
-        sv.submitData("B21DCCN564", "3Qe0Qb5w", res);
+        sv.submitData("B22DCCN466", "3Qe0Qb5w", res);
     }
 }

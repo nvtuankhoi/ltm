@@ -1,4 +1,4 @@
-package RMI.B21DCCN066;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -10,7 +10,7 @@ public class LonThuK {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN066", "uIKHCTWG");
+        byte[] a = sv.requestData("B22DCCN466", "uIKHCTWG");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println();
@@ -28,6 +28,6 @@ public class LonThuK {
         for (byte x : ans)
             System.out.print(x + " ");
         // c.
-        sv.submitData("B21DCCN066", "uIKHCTWG", ans);
+        sv.submitData("B22DCCN466", "uIKHCTWG", ans);
     }
 }
