@@ -10,7 +10,7 @@ public class MaxMin2 {
         int sP = 2207;
 
         // a. Gửi mã sinh viên và mã câu hỏi
-        String code = ";B21DCCN319;Aisji6xy";
+        String code = ";B22DCCN466;Aisji6xy";
         DatagramPacket dpGui = new DatagramPacket(code.getBytes(), code.length(), sA, sP);
         socket.send(dpGui);
 

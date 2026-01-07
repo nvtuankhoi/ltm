@@ -8,7 +8,7 @@ public class PhuongSai {
         Socket socket = new Socket("203.162.10.109", 2207);
         DataInputStream in = new DataInputStream(socket.getInputStream());
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-        String code = "B21DCCN624;1pKJUCce";
+        String code = "B22DCCN466;1pKJUCce";
         out.writeUTF(code);
         out.flush();
         int n = in.readInt();

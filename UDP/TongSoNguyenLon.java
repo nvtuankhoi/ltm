@@ -1,15 +1,17 @@
-package B21DCCN005_HE;
+package B22DCCN466;
+
 import java.io.*;
 import java.math.BigInteger;
 import java.net.*;
 import java.util.*;
+
 public class TongSoNguyenLon {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         DatagramSocket socket = new DatagramSocket();
         InetAddress sA = InetAddress.getByName("203.162.10.109");
         int sP = 2207;
-        //a. Gửi MSV, mã đề
-        String code = ";B21DCCN005;2sIjAYaU";
+        // a. Gửi MSV, mã đề
+        String code = ";B22DCCN466;2sIjAYaU";
         DatagramPacket dpGui = new DatagramPacket(code.getBytes(), code.length(), sA, sP);
         socket.send(dpGui);
         // b. Nhận dữ liệu từ server
@@ -26,7 +28,7 @@ public class TongSoNguyenLon {
         BigInteger tong = a.add(b), hieu = a.subtract(b);
         String res = String.format("%s;%s,%s", rqID, tong.toString(), hieu.toString());
         System.out.println(res);
-        //d. Gửi lên server
+        // d. Gửi lên server
         DatagramPacket dpGui1 = new DatagramPacket(res.getBytes(), res.length(), sA, sP);
         socket.send(dpGui1);
         socket.close();

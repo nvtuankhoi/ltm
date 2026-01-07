@@ -14,12 +14,12 @@ public class Object {
         // Tên lớp a = (Tên lớp)sv.requestObject(Mã sinh viên, Mã câu hỏi); //Chú ý ép
         // kiểu
         // Ví dụ:
-        Book book = (Book) sv.requestObject("B21DCCN008", "nCOdwcKJ");
+        Book book = (Book) sv.requestObject("B22DCCN466", "nCOdwcKJ");
 
         // b. Xử lý đối tượng
         // Sau bước này, ta thu được đối tượng book đã xử lý chẳng hạn
 
         // c. Gửi lại
-        sv.submitObject("B21DCCN008", "nCOdwcKJ", book);// Thay MSV mã câu hỏi và tên đối tượng tương ứng
+        sv.submitObject("B22DCCN466", "nCOdwcKJ", book);// Thay MSV mã câu hỏi và tên đối tượng tương ứng
     }
 }

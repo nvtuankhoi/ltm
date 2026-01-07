@@ -11,7 +11,7 @@ public class TimTuDaiNhat {
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         //
-        String code = "B21DCCN008;oKOoB5Fc";
+        String code = "B22DCCN466;oKOoB5Fc";
         bw.write(code);
         bw.newLine();
         bw.flush();

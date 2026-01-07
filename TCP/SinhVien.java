@@ -11,7 +11,7 @@ public class SinhVien {
         ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
         // a.
-        String code = "B21DCCN222;j5ELZdmS";
+        String code = "B22DCCN466;j5ELZdmS";
         out.writeObject(code);
         out.flush();
         // b.

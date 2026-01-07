@@ -1,4 +1,4 @@
-package RMI.B21DCCN016;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class PhuongSai {
         // a. Nhận dữ liệu
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN016", "uZMEY3Zg");
+        String s = (String) sv.requestData("B22DCCN466", "uZMEY3Zg");
         System.out.println(s);
         // b. Xử lý: Tìm danh sách các bộ ba số Pythagore
         ArrayList<Double> a = new ArrayList<>();
@@ -33,6 +33,6 @@ public class PhuongSai {
         // c. Gửi kết quả
         String res = String.format("%.2f : %.2f", pSai, doLechChuan);
         System.out.println(res);
-        sv.submitData("B21DCCN016", "uZMEY3Zg", res);
+        sv.submitData("B22DCCN466", "uZMEY3Zg", res);
     }
 }

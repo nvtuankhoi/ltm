@@ -1,11 +1,11 @@
-package WebService.B21DCCN014;
+package WebService.B22DCCN466;
 
 import vn.medianews.*;
 import java.util.*;
 
 public class QuanLyKhachHangTongTien {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN014", qCode = "lgKj7lIF";
+        String msv = "B22DCCN466", qCode = "lgKj7lIF";
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         List<Customer> a = (List<Customer>) port.requestListCustomer(msv, qCode);

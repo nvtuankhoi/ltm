@@ -1,4 +1,4 @@
-package RMI.B21DCCN036;
+package RMI.B22DCCN466;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ public class NenRLE {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN036", "2uG0lQGi");
+        byte[] a = sv.requestData("B22DCCN466", "2uG0lQGi");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println();
@@ -36,6 +36,6 @@ public class NenRLE {
             ans[idx++] = x;
         for (byte x : ans)
             System.out.print(x + " ");
-        sv.submitData("B21DCCN036", "2uG0lQGi", ans);
+        sv.submitData("B22DCCN466", "2uG0lQGi", ans);
     }
 }

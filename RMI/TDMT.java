@@ -1,4 +1,4 @@
-package RMI.B21DCCN021;
+package RMI.B22DCCN466;
 
 import RMI.RMI.ObjectService;
 import RMI.RMI.Order;
@@ -10,7 +10,7 @@ public class TDMT {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Order order = (Order) sv.requestObject("B21DCCN021", "vLJWvWpf");
+        Order order = (Order) sv.requestObject("B22DCCN466", "vLJWvWpf");
         System.out.println(order);
         // b.
         String x = order.getShippingType().substring(0, 2).toUpperCase(); // Hai ký tự đầu của shippingType
@@ -21,6 +21,6 @@ public class TDMT {
         order.setOrderCode(orderCode);
         // c
         System.out.println(order);
-        sv.submitObject("B21DCCN021", "vLJWvWpf", order);
+        sv.submitObject("B22DCCN466", "vLJWvWpf", order);
     }
 }

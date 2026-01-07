@@ -9,7 +9,7 @@ public class PhepXOR2 {
         // a. Nhận dữ liệu từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN012", "4BraNTI5");
+        byte[] a = sv.requestData("B22DCCN466", "4BraNTI5");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println();
@@ -22,6 +22,6 @@ public class PhepXOR2 {
         for (byte x : maHoa)
             System.out.print(x + " ");
         // c. Gửi
-        sv.submitData("B21DCCN012", "4BraNTI5", maHoa);
+        sv.submitData("B22DCCN466", "4BraNTI5", maHoa);
     }
 }

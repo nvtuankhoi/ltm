@@ -1,4 +1,4 @@
-package RMI.B21DCCN053;
+package RMI.B22DCCN466;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -30,7 +30,7 @@ public class SinhToHop {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN053", "juC3u7C6");
+        String s = (String) sv.requestData("B22DCCN466", "juC3u7C6");
         // String s = "2, 0, 5, 8, 1 ;3";
         System.out.println(s);
         int idx = s.indexOf(";");
@@ -58,6 +58,6 @@ public class SinhToHop {
         }
         // c.
         System.out.println(ans);
-        sv.submitData("B21DCCN053", "juC3u7C6", ans);
+        sv.submitData("B22DCCN466", "juC3u7C6", ans);
     }
 }

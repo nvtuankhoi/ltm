@@ -1,4 +1,4 @@
-package RMI.B21DCCN032;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -10,7 +10,7 @@ public class MaHoaHexa {
         // a. Nhận dữ liệu từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN032", "pK0IZNnt");
+        byte[] a = sv.requestData("B22DCCN466", "pK0IZNnt");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println();
@@ -20,6 +20,6 @@ public class MaHoaHexa {
             res += String.format("%02x", x & 0xFF);
         System.out.println(res);
         byte[] ans = res.toString().getBytes();
-        sv.submitData("B21DCCN032", "pK0IZNnt", ans);
+        sv.submitData("B22DCCN466", "pK0IZNnt", ans);
     }
 }

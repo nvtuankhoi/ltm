@@ -11,7 +11,7 @@ public class SanPhamDaoNguoc {
         ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
         // a.
-        String code = "B21DCCN319;W7S23nSu";
+        String code = "B22DCCN466;W7S23nSu";
         out.writeObject(code);
         out.flush();
         // b.

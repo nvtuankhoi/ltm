@@ -1,45 +1,55 @@
-package B21DCCN005_HE;
+package B22DCCN466;
+
 import UDP.Book;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+
 public class ChuanHoaThongTinSach {
-    public static String chuanHoa1(String s){
+    public static String chuanHoa1(String s) {
         return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
     }
-    public static String chuanhoaTitle(String s){
-        String []tmp = s.trim().split("\\s+");
+
+    public static String chuanhoaTitle(String s) {
+        String[] tmp = s.trim().split("\\s+");
         String ans = "";
-        for(String x: tmp) ans += chuanHoa1(x) + " ";
+        for (String x : tmp)
+            ans += chuanHoa1(x) + " ";
         ans = ans.substring(0, ans.length() - 1);
         return ans;
     }
-    public static String chuanhoaISBN(String s){
-        //Ví dụ: Input: 9783161484100. Ouput: 978-3-16-148410-0
-        return String.format("%s-%s-%s-%s-%s", s.substring(0, 3), s.substring(3, 4), s.substring(4, 6), s.substring(6, 12), s.substring(12));                
+
+    public static String chuanhoaISBN(String s) {
+        // Ví dụ: Input: 9783161484100. Ouput: 978-3-16-148410-0
+        return String.format("%s-%s-%s-%s-%s", s.substring(0, 3), s.substring(3, 4), s.substring(4, 6),
+                s.substring(6, 12), s.substring(12));
     }
-    public static String chuanhoaAuthor(String s){
-        String []tmp = s.trim().split("\\s+");
+
+    public static String chuanhoaAuthor(String s) {
+        String[] tmp = s.trim().split("\\s+");
         String ans = tmp[0].toUpperCase() + ", ";
-        for(int i = 1;i < tmp.length; i++) ans += chuanHoa1(tmp[i]) + " ";
+        for (int i = 1; i < tmp.length; i++)
+            ans += chuanHoa1(tmp[i]) + " ";
         ans = ans.substring(0, ans.length() - 1);
         return ans;
     }
-    public static String chuanhoaNgay(String s){
+
+    public static String chuanhoaNgay(String s) {
         s = s.replace("-", " ");
         String[] part = s.split("\\s+");
-        return part[1] + "/" + part[0]; 
+        return part[1] + "/" + part[0];
     }
-    public static void main(String[] args) throws Exception{
+
+    public static void main(String[] args) throws Exception {
         DatagramSocket socket = new DatagramSocket();
         InetAddress sA = InetAddress.getByName("203.162.10.109");
         int sP = 2209;
         // a. Gửi mã sinh viên và mã câu hỏi
-        String code = ";B21DCCN005;LFACr5Bi";
+        String code = ";B22DCCN466;LFACr5Bi";
         DatagramPacket dpGui = new DatagramPacket(code.getBytes(), code.length(), sA, sP);
         socket.send(dpGui);
-        //b. Nhận cả gói tin (Như các bài khác) rồi chia đôi
-        byte[] buffer = new byte[2048];  
+        // b. Nhận cả gói tin (Như các bài khác) rồi chia đôi
+        byte[] buffer = new byte[2048];
         DatagramPacket dpNhan = new DatagramPacket(buffer, buffer.length);
         socket.receive(dpNhan);
         // Lấy phần requestId (08 byte đầu)
@@ -62,7 +72,7 @@ public class ChuanHoaThongTinSach {
         oos.writeObject(book);
         oos.flush();
         // Tạo mảng sendData mới
-        byte[] sendData = new byte[8 + baos.size()];                
+        byte[] sendData = new byte[8 + baos.size()];
         System.arraycopy(reId.getBytes(), 0, sendData, 0, 8);
         System.arraycopy(baos.toByteArray(), 0, sendData, 8, baos.size());
         DatagramPacket dpGuiLai = new DatagramPacket(sendData, sendData.length, sA, sP);

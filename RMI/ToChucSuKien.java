@@ -1,4 +1,4 @@
-package RMI.B21DCCN029;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class ToChucSuKien {
         // a.
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Event event = (Event) sv.requestObject("B21DCCN029", "FKrGvwLM");
+        Event event = (Event) sv.requestObject("B22DCCN466", "FKrGvwLM");
         System.out.println(event);
         // b.
         String ans = "";
@@ -35,6 +35,6 @@ public class ToChucSuKien {
         event.setEventCode(ans);
         // c.
         System.out.println(event);
-        sv.submitObject("B21DCCN029", "FKrGvwLM", event);
+        sv.submitObject("B22DCCN466", "FKrGvwLM", event);
     }
 }

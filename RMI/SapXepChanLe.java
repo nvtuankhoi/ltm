@@ -1,4 +1,4 @@
-package RMI.B21DCCN029;
+package RMI.B22DCCN466;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -10,7 +10,7 @@ public class SapXepChanLe {
         // a.
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN029", "A7hytb1V");
+        byte[] a = sv.requestData("B22DCCN466", "A7hytb1V");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println("");
@@ -28,6 +28,6 @@ public class SapXepChanLe {
         for (byte x : res)
             System.out.print(x + " ");
         // c.
-        sv.submitData("B21DCCN028", "A7hytb1V", res);
+        sv.submitData("B22DCCN466", "A7hytb1V", res);
     }
 }

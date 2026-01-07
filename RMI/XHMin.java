@@ -1,4 +1,4 @@
-package RMI.B21DCCN564;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class XHMin {
         // a. Nhận dữ liệu từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN564", "L7A2NPQU");
+        byte[] a = sv.requestData("B22DCCN466", "L7A2NPQU");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println("");
@@ -30,6 +30,6 @@ public class XHMin {
         System.out.println(ptuMin + " " + slMin);
         // c. Gửi
         byte[] res = { ptuMin, (byte) slMin };
-        sv.submitData("B21DCCN564", "L7A2NPQU", res);
+        sv.submitData("B22DCCN466", "L7A2NPQU", res);
     }
 }

@@ -10,7 +10,7 @@ public class secMax {
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
         //
-        String ma = "B21DCCN370;4XNRzWzl";
+        String ma = "B22DCCN466;4XNRzWzl";
         out.write(ma.getBytes());
         out.flush();
         //

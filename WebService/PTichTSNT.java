@@ -4,7 +4,7 @@ import java.util.*;
 
 public class PTichTSNT {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN001", qCode = "TwZpbqUg";
+        String msv = "B22DCCN466", qCode = "TwZpbqUg";
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         List<Integer> a = port.getData(msv, qCode);

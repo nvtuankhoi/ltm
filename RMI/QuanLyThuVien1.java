@@ -1,4 +1,4 @@
-package RMI.B21DCCN008;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class QuanLyThuVien1 {
         // a. Nhận sản phẩm từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Book book = (Book) sv.requestObject("B21DCCN008", "nCOdwcKJ");
+        Book book = (Book) sv.requestObject("B22DCCN466", "nCOdwcKJ");
         System.out.println(book);
         // Tạo mã
         String code = "";
@@ -23,6 +23,6 @@ public class QuanLyThuVien1 {
         book.setCode(code);
         System.out.println(book);
         // c.
-        sv.submitObject("B21DCCN008", "nCOdwcKJ", book);
+        sv.submitObject("B22DCCN466", "nCOdwcKJ", book);
     }
 }

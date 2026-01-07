@@ -9,7 +9,7 @@ public class TongCacSo {
         Socket socket = new Socket("172.188.19.218", 1604);
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
-        String ma = "B21DCCN307;PUh9Ki1";
+        String ma = "B22DCCN466;PUh9Ki1";
         out.write(ma.getBytes());
         out.flush();
         byte[] buffer = new byte[1024];

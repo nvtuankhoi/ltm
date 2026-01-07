@@ -1,4 +1,4 @@
-package RMI.B21DCCN008;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -10,7 +10,7 @@ public class ChuyenDoiBatPhan {
         // a. Nhận dữ liệu từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN008", "HhPAxeDw");
+        byte[] a = sv.requestData("B22DCCN466", "HhPAxeDw");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println();
@@ -20,6 +20,6 @@ public class ChuyenDoiBatPhan {
             res += String.format("%03o", x & 0xFF);
         System.out.println(res);
         byte[] ans = res.toString().getBytes();
-        sv.submitData("B21DCCN008", "HhPAxeDw", ans);
+        sv.submitData("B22DCCN466", "HhPAxeDw", ans);
     }
 }

@@ -1,4 +1,4 @@
-package RMI.B21DCCN032;
+package RMI.B22DCCN466;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -9,7 +9,7 @@ public class ChuyenDoiThapPhanLaMa {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN032", "ADu6zRYE");
+        String s = sv.requestCharacter("B22DCCN466", "ADu6zRYE");
         System.out.println(s);
         // b.
         String rm = "";
@@ -24,6 +24,6 @@ public class ChuyenDoiThapPhanLaMa {
         }
         System.out.println(rm);
         // c.
-        sv.submitCharacter("B21DCCN032", "ADu6zRYE", rm);
+        sv.submitCharacter("B22DCCN466", "ADu6zRYE", rm);
     }
 }

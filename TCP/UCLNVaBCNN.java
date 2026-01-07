@@ -17,7 +17,7 @@ public class UCLNVaBCNN {
         Socket socket = new Socket("172.188.19.218", 1605);
         DataInputStream in = new DataInputStream(socket.getInputStream());
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-        String code = "B21DCCN799;JKT5DjN";
+        String code = "B22DCCN466;JKT5DjN";
         out.writeUTF(code);
         out.flush();
         int a = in.readInt(), b = in.readInt();

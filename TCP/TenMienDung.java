@@ -9,7 +9,7 @@ public class TenMienDung {
         Socket socket = new Socket("172.188.19.218", 1606);
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-        String code = "B21DCCN174;m1NkVqY";
+        String code = "B22DCCN466;m1NkVqY";
         bw.write(code);
         bw.newLine();
         bw.flush();

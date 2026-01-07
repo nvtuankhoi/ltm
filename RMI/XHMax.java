@@ -1,4 +1,4 @@
-package RMI.B21DCCN319;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class XHMax {
         // a. Nhận dữ liệu từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN319", "1mPMIkGJ");
+        byte[] a = sv.requestData("B22DCCN466", "1mPMIkGJ");
         for (byte x : a)
             System.out.print(x + " ");
         System.out.println("");
@@ -30,6 +30,6 @@ public class XHMax {
         System.out.println(ptuMax + " " + slMax);
         // c. Gửi
         byte[] res = { ptuMax, (byte) slMax };
-        sv.submitData("B21DCCN319", "1mPMIkGJ", res);
+        sv.submitData("B22DCCN466", "1mPMIkGJ", res);
     }
 }

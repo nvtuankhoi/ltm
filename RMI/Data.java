@@ -10,7 +10,7 @@ public class Data {
         // a. Nhận dữ liệu
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        int N = (int) sv.requestData("B21DCCN319", "NMATI6Zw"); // Thay tương ứng MSV mã câu hỏi vào
+        int N = (int) sv.requestData("B22DCCN466", "NMATI6Zw"); // Thay tương ứng MSV mã câu hỏi vào
         // Chú ý thay kiểu dữ liệu tương ứng và ép kiểu, cú pháp tương tự
         // Ví dụ đề bài cần String thì ghi: String x = (String)sv.requestData (MSV, mã
         // đề)
@@ -23,6 +23,6 @@ public class Data {
         // res chẳng hạn
         int res = 0;
         // c. Gửi kết quả
-        sv.submitData("B21DCCN319", "NMATI6Zw", res); // Chú ý thay MSV mã đề tương ứng
+        sv.submitData("B22DCCN466", "NMATI6Zw", res); // Chú ý thay MSV mã đề tương ứng
     }
 }

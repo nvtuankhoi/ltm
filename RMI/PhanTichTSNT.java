@@ -1,4 +1,4 @@
-package RMI.B21DCCN022;
+package RMI.B22DCCN466;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ public class PhanTichTSNT {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        int n = (int) sv.requestData("B21DCCN022", "zzmmquoc");
+        int n = (int) sv.requestData("B22DCCN466", "zzmmquoc");
         System.out.println(n);
         List<Integer> a = new ArrayList<>();
         for (int i = 2; i * i <= n; i++) {
@@ -23,6 +23,6 @@ public class PhanTichTSNT {
         if (n > 1)
             a.add(n);
         System.out.println(a);
-        sv.submitData("B21DCCN022", "zzmmquoc", a);
+        sv.submitData("B22DCCN466", "zzmmquoc", a);
     }
 }

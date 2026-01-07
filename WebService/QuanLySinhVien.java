@@ -4,7 +4,7 @@ import java.util.*;
 
 public class QuanLySinhVien {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN001", qCode = "2RjVBzv0"; // Mã câu hỏi
+        String msv = "B22DCCN466", qCode = "2RjVBzv0"; // Mã câu hỏi
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         List<StudentY> a = (List<StudentY>) port.requestListStudentY(msv, qCode);

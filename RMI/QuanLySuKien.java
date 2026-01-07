@@ -1,4 +1,4 @@
-package RMI.B21DCCN048;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -12,7 +12,7 @@ public class QuanLySuKien {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Ticket ticket = (Ticket) sv.requestObject("B21DCCN048", "Uct8bABt");
+        Ticket ticket = (Ticket) sv.requestObject("B22DCCN466", "Uct8bABt");
         // Ticket ticket = new Ticket(1, "Charity Concert", "15/06/2024");
         System.out.println(ticket);
         // Lấy tên
@@ -46,6 +46,6 @@ public class QuanLySuKien {
         ticket.setTicketCode(res);
         System.out.println(ticket);
         // c.
-        sv.submitObject("B21DCCN048", "Uct8bABt", ticket);
+        sv.submitObject("B22DCCN466", "Uct8bABt", ticket);
     }
 }

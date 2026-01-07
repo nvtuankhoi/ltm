@@ -1,4 +1,4 @@
-package RMI.B21DCCN021;
+package RMI.B22DCCN466;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ public class MaHoaVigen {
     public static void main(String[] args) throws Exception {
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN021", "Y7YMXHs4");
+        String s = sv.requestCharacter("B22DCCN466", "Y7YMXHs4");
         System.out.println(s);
         int idx = s.indexOf(";");
         String keyW = s.substring(0, idx), text = s.substring(idx + 1), ans = "";
@@ -25,6 +25,6 @@ public class MaHoaVigen {
             ans += z;
         }
         System.out.println(ans);
-        sv.submitCharacter("B21DCCN021", "Y7YMXHs4", ans);
+        sv.submitCharacter("B22DCCN466", "Y7YMXHs4", ans);
     }
 }

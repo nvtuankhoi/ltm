@@ -1,17 +1,19 @@
-package WebService.B21DCCN082;
+package WebService.B22DCCN466;
+
 import vn.medianews.*;
 import java.util.*;
+
 public class TongCacSo {
-    public static void main(String[] args) throws Exception{
-        String msv = "B21DCCN082", qCode = "hnVAHv3I"; 
+    public static void main(String[] args) throws Exception {
+        String msv = "B22DCCN466", qCode = "hnVAHv3I";
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
-        List<Integer>a = port.getData(msv, qCode);
+        List<Integer> a = port.getData(msv, qCode);
         System.out.println(a);
         int tong = 0;
-        for(int x: a) tong+=x;
+        for (int x : a)
+            tong += x;
         System.out.println(tong);
         port.submitDataInt(msv, qCode, tong);
     }
 }
-

@@ -1,4 +1,4 @@
-package RMI.B21DCCN319;
+package RMI.B22DCCN466;
 
 import java.rmi.*;
 import java.rmi.registry.*;
@@ -11,7 +11,7 @@ public class XuLyVanBan {
         // a. Nhận chuỗi từ server
         Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN319", "NFldNPp6");
+        String s = sv.requestCharacter("B22DCCN466", "NFldNPp6");
         System.out.println(s);
         // b. Xử lý xâu
         s = s.replace("\"", "");
@@ -34,6 +34,6 @@ public class XuLyVanBan {
         String res = chan + "; " + le;
         System.out.println(res);
         // c. Gửi kết quả lại server
-        sv.submitCharacter("B21DCCN319", "NFldNPp6", res);
+        sv.submitCharacter("B22DCCN466", "NFldNPp6", res);
     }
 }
